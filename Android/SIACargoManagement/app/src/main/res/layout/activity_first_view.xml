@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.teamiss.sia.siacargomanagement.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="60dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:focusableInTouchMode="true">
+        <ImageView android:src="@drawable/logo"
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:layout_below="@+id/logo"
+            android:text="Cargo Dimension Measure"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="24dp"
+            android:textColor="@color/primaryOrange" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/cargo_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/title"
+            app:hintTextAppearance="@style/TextAppearence.TextInputLayout.hint">
+            <EditText android:id="@+id/input_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/primaryOrange"
+                android:maxLength="2"
+                android:hint="Number of pieces" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_continue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/cargo_num"
+            android:layout_marginBottom="20dp"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:background="@color/primaryOrange"
+            android:text="continue"/>
+
+    </RelativeLayout>
+</ScrollView>

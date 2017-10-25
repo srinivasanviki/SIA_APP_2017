@@ -16,21 +16,40 @@
                 tools:layout_editor_absoluteY="0dp"
                 tools:layout_editor_absoluteX="8dp" />
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/camera">
-                <Button
+                android:layout_below="@+id/camera"
+                >
+
+                <android.support.v7.widget.AppCompatButton
                     android:id="@+id/button1"
+                    android:background="@color/primaryOrange"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="capture" />
-                <Button
+                    android:textColor="@color/white"
+                    android:layout_margin="10dp"
+                    android:text="capture"
+                    android:layout_weight="1"/>
+                <android.support.v7.widget.AppCompatButton
                     android:id="@+id/button2"
+                    android:background="@color/primaryOrange"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recapture" />
+                    android:textColor="@color/white"
+                    android:text="Recapture"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"/>
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/button3"
+                    android:background="@color/primaryOrange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Measure"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"/>
             </LinearLayout>
     </RelativeLayout>
 </ScrollView>

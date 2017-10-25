@@ -1,5 +1,6 @@
 package com.teamiss.sia.siacargomanagement;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
@@ -11,17 +12,23 @@ import android.widget.ImageView;
 import com.wonderkiln.camerakit.CameraListener;
 import com.wonderkiln.camerakit.CameraView;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    CameraView camera;
-    Button capture,reCapture;
+
+    @InjectView(R.id.button1) Button capture;
+    @InjectView(R.id.button2) Button reCapture;
+    @InjectView(R.id.camera) CameraView camera;
+    Integer numCargo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        camera = findViewById(R.id.camera);
-        capture = findViewById(R.id.button1);
-        reCapture = findViewById(R.id.button2);
+        ButterKnife.inject(this);
+        Intent i = getIntent();
+        numCargo = i.getIntExtra("numCargo",1);
 
         camera.setCameraListener(new CameraListener() {
             @Override
@@ -29,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 super.onPictureTaken(picture);
 
                 // Create a bitmap
-                Bitmap result = BitmapFactory.decodeByteArray(picture, 0, picture.length);
+                // Bitmap result = BitmapFactory.decodeByteArray(picture, 0, picture.length);
                 camera.stop();
                 //imageView.setVisibility(View.VISIBLE);
                 //imageView.setImageBitmap(result);
@@ -50,6 +57,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onPause() {
         camera.stop();
         super.onPause();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent firstView = new Intent(this, StartingActivity.class);
+        startActivity(firstView);
+        finish();
     }
 
     @Override
