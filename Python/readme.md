@@ -3,4 +3,6 @@
 
 | Step  | Output | Details
 | ------------- | ------------- | ------------- |
-| 1  | <img src="/Python/sia-fin-out.JPG" width="300">  | Output Image |
+| 1  | <img src="/Python/sia-fin-out.JPG" width="300">  | Output virtual Image |
+| 2  | <img src="/Python/out.JPG" width="300">  | Output Photo Image |
+
