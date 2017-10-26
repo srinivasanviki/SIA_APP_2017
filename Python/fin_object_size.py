@@ -151,7 +151,7 @@ def main_box(image,pixelsPerMetric):
 	return orig
 
 if  __name__ == '__main__':
-	image = "C:\\Users\\naitikshukla\\Downloads\\sia-ref-circle.jpg"
+	image = "/home/viki/sia_app_challenge/sia-ref-circle.jpg"
 	#image = "C:\\Users\\naitikshukla\\Downloads\\ref1.jpg"
 	width = 0.70
 	image = cv2.imread(image)

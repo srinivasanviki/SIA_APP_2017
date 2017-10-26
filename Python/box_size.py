@@ -16,7 +16,7 @@ import cv2
 def midpoint(ptA, ptB):
 	return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
 
-image = "C:\\Users\\naitikshukla\\Downloads\\ref.jpg"
+image = "/home/viki/sia_app_challenge/SIA_APP_2017/Python/ref.jpg"
 width = 0.955
 # load the image, convert it to grayscale, and blur it slightly
 image = cv2.imread(image)
